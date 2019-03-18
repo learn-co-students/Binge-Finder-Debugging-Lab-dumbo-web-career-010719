@@ -5,8 +5,6 @@ import Nav from './Nav';
 import SelectedShowContainer from './SelectedShowContainer';
 import { Grid } from 'semantic-ui-react';
 
-
-
 class App extends Component {
   state = {
     shows: [],
@@ -25,9 +23,6 @@ class App extends Component {
   }
 
   handleSearch = (e) => {
-    console.log(e.target.value);
-    const newArr = [...this.state.shows]
-    const filter = newArr.filter(show => show.name.toLowerCase().includes(e.target.value))
     this.setState({ searchTerm: e.target.value.toLowerCase() })
   }
 
